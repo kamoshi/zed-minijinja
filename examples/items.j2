@@ -1,0 +1,32 @@
+{% extends "examples/base.jinja" %}
+
+{% block title %}Items — {{ super() }}{% endblock %}
+
+{% block content %}
+<h1>Items</h1>
+
+{% if items %}
+    <ul>
+    {% for item in items | sort(attribute="name") %}
+        <li class="{{ loop.cycle('odd', 'even') }}">
+            <strong>{{ item.name | upper }}</strong>
+            {%- if item.description %}: {{ item.description }}{% endif %}
+            <span class="badge">{{ item.count }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items found.</p>
+{% endif %}
+
+{# Macro example #}
+{% macro render_tag(label, color="blue") %}
+    <span class="tag tag-{{ color }}">{{ label }}</span>
+{% endmacro %}
+
+<div class="tags">
+    {% for tag in tags %}
+        {{ render_tag(tag.label, tag.color | default("gray")) }}
+    {% endfor %}
+</div>
+{% endblock %}

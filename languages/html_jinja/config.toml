@@ -1,0 +1,15 @@
+name = "Jinja2"
+grammar = "html"
+path_suffixes = ["jinja", "jinja2", "j2"]
+block_comment = ["{#", "#}"]
+brackets = [
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "{{", end = "}}", close = true, newline = false },
+    { start = "{%", end = "%}", close = true, newline = false },
+    { start = "{#", end = "#}", close = true, newline = false },
+    { start = "<", end = ">", close = false, newline = true, not_in = ["comment", "string"] },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["string"] },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["string"] },
+]
+word_characters = ["-"]

@@ -1,0 +1,9 @@
+# Rust
+target/
+
+# Compiled grammars and extension (build artifacts)
+grammars/
+*.wasm
+
+# Downloaded LSP binaries (managed by Zed at runtime)
+jinja-lsp-*/

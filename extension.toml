@@ -1,0 +1,21 @@
+id = "minijinja"
+name = "MiniJinja"
+version = "0.0.1"
+schema_version = 1
+authors = [""]
+
+description = "MiniJinja template language support and language server."
+repository = "https://github.com/example/zed-minijinja"
+
+[grammars.jinja]
+repository = "https://github.com/cathaysia/tree-sitter-jinja"
+path = "tree-sitter-jinja"
+commit = "07a62adf99c0f41e0cab7ab523541309a8d73dc4"
+
+[grammars.html]
+repository = "https://github.com/JaagupAverin/tree-sitter-html"
+commit = "5f47d6608069f4ef35d836dc0083c90733c72810"
+
+[language_servers.jinja-lsp]
+name = "Jinja Language Server"
+language = "Jinja2"
