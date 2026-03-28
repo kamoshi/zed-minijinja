@@ -2,10 +2,10 @@ id = "minijinja"
 name = "MiniJinja"
 version = "0.0.1"
 schema_version = 1
-authors = [""]
+authors = ["Maciej Jur <maciej@kamoshi.org>"]
 
-description = "MiniJinja template language support and language server."
-repository = "https://github.com/example/zed-minijinja"
+description = "Syntax highlighting and LSP for MiniJinja."
+repository = "https://github.com/kamoshi/zed-minijinja"
 
 [grammars.jinja]
 repository = "https://github.com/cathaysia/tree-sitter-jinja"

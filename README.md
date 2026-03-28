@@ -3,7 +3,7 @@
 Jinja2 template support for the [Zed](https://zed.dev) editor.
 
 - Syntax highlighting for `.jinja`, `.jinja2`, and `.j2` files
-- Autocompletion, hover docs, and diagnostics via [jinja-lsp](https://github.com/uros-5/jinja-lsp)
+- Autocompletion, hover docs, and diagnostics.
 
 ## Configuration
 
@@ -24,3 +24,10 @@ The language server looks for templates and backend source files based on paths 
 ```
 
 Supported `lang` values: `rust`, `python`.
+
+## Acknowledgments
+
+This plugin uses the following components
+
+* Tree-sitter grammar from  [`tree-sitter-html-jinja`](https://github.com/JaagupAverin/html-jinja)
+* LSP provided by [`jinja-lsp`](https://github.com/uros-5/jinja-lsp)
